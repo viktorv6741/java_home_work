@@ -95,8 +95,8 @@ public class Main {
         int numberOfPoints = 100000000;
         double pointsInside = 0;
         for (int i = 0; i < numberOfPoints; i++) {
-            double randomXCoordinates = random.nextGaussian() ;
-            double randomYCoordinates = random.nextGaussian() ;
+            double randomXCoordinates = random.nextGaussian() * maxY;
+            double randomYCoordinates = random.nextGaussian() * maxX;
 
             if (randomXCoordinates >= minX && randomXCoordinates <= maxX && randomYCoordinates >= minY && randomYCoordinates <= maxY) {
                 pointsInside++;
@@ -110,8 +110,8 @@ public class Main {
         int numberOfPoints = 100000000;
         double pointsInside = 0;
         for (int i = 0; i < numberOfPoints; i++) {
-            double randomXCoordinates = random.nextGaussian() ;
-            double randomYCoordinates = random.nextGaussian() ;
+            double randomXCoordinates = random.nextGaussian() * maxX;
+            double randomYCoordinates = random.nextGaussian() * maxY;
             if (polygon.contains(randomXCoordinates, randomYCoordinates)) {
                 pointsInside++;
             }
